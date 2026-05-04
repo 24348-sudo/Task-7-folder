@@ -1,10 +1,18 @@
 import sqlite3
 
-db = sqlite3.connect('xxbestfoods.db')
-cursor = db.cursor()
-sql = 'SELECT * FROM best_foods'
-cursor.execute(sql)
-results = cursor.fetchall()
-print(results)
+#variable for database name
+DATABASE = 'xxbestfoods.db'
 
-db.close() 
+#functions
+def print_all_foods():
+    db = sqlite3.connect(DATABASE)
+    cursor = db.cursor()
+    sql = 'SELECT * FROM best_foods'
+    cursor.execute(sql)
+    results = cursor.fetchall()
+    print(results)
+
+    db.close() \
+
+#main code 
+print_all_foods()
