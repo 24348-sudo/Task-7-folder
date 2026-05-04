@@ -1,0 +1,11 @@
+import sqlite3
+
+db = sqlite3.connect('xxbestfoods.db')
+cursor = db.cursor()
+sql = 'SELECT * FROM best_foods;'
+cursor.execute(sql)
+results = cursor.fetchall()
+for food in results:
+    print(f"Name: {food[1]}, Country: {food[2]}, Ranking: {food[3]}")
+
+db.close()
