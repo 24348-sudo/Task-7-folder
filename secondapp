@@ -7,9 +7,11 @@ def print_all_foods():
     sql = 'SELECT * FROM best_foods;'
     cursor.execute(sql)
     results = cursor.fetchall()
-    print("Food Name                       Country of origin          Ranking")
+    print("""
+          Food Name                       Country of origin          Ranking
+          """)
     for food in results:
-        print(f"{food[1]:<34}{food[2]:<28}{food[3]}")
+        print(f"{food[1]:<34}{food[2]:<28}{food[3]}\n")
     db.close()
 
 
@@ -19,9 +21,9 @@ def print_foods_and_country():
     sql = 'SELECT * FROM best_foods;'
     cursor.execute(sql)
     results = cursor.fetchall()
-    print("Food Name                       Country of origin")
+    print("\nFood Name                       Country of origin\n")
     for food in results:
-        print(f"{food[1]:<34}{food[2]:<28}")
+        print(f"{food[1]:<34}{food[2]:<28}\n")
     db.close()
 
 
@@ -31,9 +33,9 @@ def print_foods_and_ranking():
     sql = 'SELECT * FROM best_foods;'
     cursor.execute(sql)
     results = cursor.fetchall()
-    print("Food Name                       Ranking")
+    print("\nFood Name                       Ranking\n")
     for food in results:
-        print(f"{food[1]:<34}{food[3]}")
+        print(f"{food[1]:<34}{food[3]}\n")
     db.close()
 
 
