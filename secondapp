@@ -1,9 +1,10 @@
 import sqlite3
 
-#functions
+# functions
+
 
 def print_all_foods():
-    #printing the food name, country and ranking
+    # printing the food name, country and ranking
     db = sqlite3.connect('xxbestfoods.db')
     cursor = db.cursor()
     sql = 'SELECT * FROM best_foods;'
@@ -18,7 +19,7 @@ def print_all_foods():
 
 
 def print_foods_and_country():
-    #printing the food name and country 
+    # printing the food name and country
     db = sqlite3.connect('xxbestfoods.db')
     cursor = db.cursor()
     sql = 'SELECT * FROM best_foods;'
@@ -31,7 +32,7 @@ def print_foods_and_country():
 
 
 def print_foods_and_ranking():
-    #printing the food name and ranking
+    # printing the food name and ranking
     db = sqlite3.connect('xxbestfoods.db')
     cursor = db.cursor()
     sql = 'SELECT * FROM best_foods;'
@@ -43,9 +44,9 @@ def print_foods_and_ranking():
     db.close()
 
 
-#main block of code
+# main block of code
 while True:
-    #main menu/user input
+    # main menu/user input
     user_input = input(
         """What would you like to do?
         1. Print all foods.
